@@ -21,5 +21,5 @@ ngx.say(t.gg(ngx.var.suffix));
 local args = ngx.req.get_uri_args()
 ngx.say(ngx.var.args);
 
-
+ngx.say(ngx.var.remote_addr);
 ----
