@@ -7,12 +7,12 @@ local data = {
 
 --local mysql = require 'resty.mysql';
 
-function _M.getClusServName()
+function _M.getClusServName(tenant_name, service_name)
   --return ngx.var.service_name ..'_1';
   --return '';
 
   -- query from db
-  return data['_'.. ngx.var.tenant_name ..'_'.. ngx.var.service_name ..'_']
+  return data['_'.. tenant_name ..'_'.. service_name ..'_'];
 end;
 
 return _M;
