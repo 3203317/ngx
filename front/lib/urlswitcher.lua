@@ -7,20 +7,12 @@ local data = {
 
 --local mysql = require 'resty.mysql';
 
-function _M.getClusterServName()
+function _M.getClusServName()
   --return ngx.var.service_name ..'_1';
   --return '';
 
   -- query from db
   return data['_'.. ngx.var.tenant_name ..'_'.. ngx.var.service_name ..'_']
-end
-
-function _M.getUrlParams()
-  if ngx.var.args == nil then
-    return 'tenant='.. ngx.var.tenant_name;
-  end
-
-  return 'tenant='.. ngx.var.tenant_name ..'&'.. ngx.var.args;
-end
+end;
 
 return _M;
