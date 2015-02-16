@@ -1,8 +1,8 @@
 local _M = {};
 
 local data = {
-  _zuhu_1_oa_ = 'oa_1',
-  _zuhu_2_oa_ = 'oa_1'
+  zuhu_1_oa = 'oa_1',
+  zuhu_2_oa = 'oa_1'
 };
 
 --local mysql = require 'resty.mysql';
@@ -12,7 +12,7 @@ function _M.getClusServName(tenant_name, service_name)
   --return '';
 
   -- query from db
-  return data['_'.. tenant_name ..'_'.. service_name ..'_'];
+  return data[tenant_name ..'_'.. service_name];
 end;
 
 return _M;
