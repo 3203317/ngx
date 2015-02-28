@@ -2,6 +2,7 @@ upstream oa_1 {
   ip_hash;
   server  192.168.56.1:35301;
   server  192.168.56.1:35302;
+  server  192.168.56.1:8082;
 }
 
 upstream oa_2 {
